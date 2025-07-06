@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Continuous Tense - Interactive LMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero-section">
+            <div class="animated-header">
+                <div class="current-tense-indicator">
+                    <span class="tense-badge" id="currentTenseBadge">Present Continuous</span>
+                </div>
+                <h1 class="main-title" id="mainTitle">🐾 Present Continuous Tense Adventure 🐾</h1>
+                <div class="cute-animals">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=100&h=100&fit=crop&crop=face" alt="Cute Cat" class="animal-icon bounce">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100&h=100&fit=crop&crop=face" alt="Cute Dog" class="animal-icon float">
+                    <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=100&h=100&fit=crop&crop=face" alt="Cute Rabbit" class="animal-icon wiggle">
+                    <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=100&h=100&fit=crop&crop=face" alt="Cute Panda" class="animal-icon bounce">
+                </div>
+                <p class="subtitle">Learn with our adorable animal friends!</p>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">0% Complete</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tense Type Navigation -->
+        <nav class="tense-nav">
+            <button class="tense-btn active" data-tense="present-continuous">🐾 Present Continuous</button>
+            <button class="tense-btn" data-tense="present-simple">⭐ Present Simple</button>
+            <button class="tense-btn" data-tense="past-simple">📅 Past Simple</button>
+            <button class="tense-btn" data-tense="future-simple">🚀 Future Simple</button>
+            <button class="tense-btn" data-tense="present-perfect">💎 Present Perfect</button>
+        </nav>
+
+        <!-- Lesson Navigation (remains the same for each tense) -->
+        <nav class="lesson-nav">
+            <button class="nav-btn active" data-section="introduction">🏠 Introduction</button>
+            <button class="nav-btn" data-section="lessons">📚 Lessons</button>
+            <button class="nav-btn" data-section="games">🎮 Games</button>
+            <button class="nav-btn" data-section="videos">🎬 Videos</button>
+            <button class="nav-btn" data-section="quiz">🏆 Quiz</button>
+        </nav>
+
+        <main class="content">
+            <!-- Present Continuous Content -->
+            <div class="tense-content active" id="present-continuous-content">
+            <!-- Introduction Section -->
+            <section id="introduction" class="lesson-section active">
+                <div class="intro-card">
+                    <h2>🌟 Welcome to Present Continuous Land! 🌟</h2>
+                    <div class="animal-intro">
+                        <div class="animal-character">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=120&h=120&fit=crop&crop=face" alt="Happy Cat" class="character-img">
+                            <div class="speech-bubble">
+                                <p>Hi! I'm Fluffy! I'm <span class="highlight">playing</span> with my ball right now!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tense-explanation">
+                        <h3>What is Present Continuous Tense? 🤔</h3>
+                        <div class="explanation-grid">
+                            <div class="explanation-item">
+                                <div class="animal-demo">
+                                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=60&h=60&fit=crop&crop=face" alt="Dog" class="demo-animal-img">
+                                    <span class="action-verb">running</span>
+                                </div>
+                                <p>The dog <strong>is running</strong> in the park</p>
+                            </div>
+                            <div class="explanation-item">
+                                <div class="animal-demo">
+                                    <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=60&h=60&fit=crop&crop=face" alt="Rabbit" class="demo-animal-img">
+                                    <span class="action-verb">jumping</span>
+                                </div>
+                                <p>The rabbit <strong>is jumping</strong> over the fence</p>
+                            </div>
+                            <div class="explanation-item">
+                                <div class="animal-demo">
+                                    <img src="https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=60&h=60&fit=crop&crop=face" alt="Penguin" class="demo-animal-img">
+                                    <span class="action-verb">swimming</span>
+                                </div>
+                                <p>The penguin <strong>is swimming</strong> in the water</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>📝 Formula</h4>
+                        <div class="formula">
+                            <span class="subject">Subject</span> + 
+                            <span class="auxiliary">am/is/are</span> + 
+                            <span class="verb">Verb + ing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Section -->
+            <section id="lessons" class="lesson-section">
+                <h2>📚 Interactive Lessons</h2>
+                <div class="lessons-grid">
+                    <div class="lesson-card" data-lesson="structure">
+                        <div class="lesson-header">
+                            <span class="lesson-icon">🏗️</span>
+                            <h3>Sentence Structure</h3>
+                        </div>
+                        <div class="lesson-content">
+                            <div class="interactive-example">
+                                <div class="sentence-builder">
+                                    <div class="word-slot subject-slot">
+                                        <select id="subjectSelect">
+                                            <option value="The cat">🐱 The cat</option>
+                                            <option value="The dog">🐶 The dog</option>
+                                            <option value="The bird">🐦 The bird</option>
+                                        </select>
+                                    </div>
+                                    <div class="word-slot auxiliary-slot">
+                                        <select id="auxiliarySelect">
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select>
+                                    </div>
+                                    <div class="word-slot verb-slot">
+                                        <select id="verbSelect">
+                                            <option value="playing">playing</option>
+                                            <option value="running">running</option>
+                                            <option value="sleeping">sleeping</option>
+                                            <option value="eating">eating</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="sentence-result" id="sentenceResult">
+                                    🐱 The cat is playing
+                                </div>
+                                <div class="animation-demo" id="animationDemo">
+                                    <span class="demo-animal">🐱</span>
+                                    <span class="demo-action">⚽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-card" data-lesson="rules">
+                        <div class="lesson-header">
+                            <span class="lesson-icon">📋</span>
+                            <h3>Grammar Rules</h3>
+                        </div>
+                        <div class="lesson-content">
+                            <div class="rules-list">
+                                <div class="rule-item">
+                                    <div class="rule-icon">🦆</div>
+                                    <div class="rule-text">
+                                        <strong>I am + verb-ing</strong><br>
+                                        <em>I am swimming like a duck!</em>
+                                    </div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-icon">🐻</div>
+                                    <div class="rule-text">
+                                        <strong>He/She/It is + verb-ing</strong><br>
+                                        <em>The bear is sleeping peacefully.</em>
+                                    </div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-icon">🐹</div>
+                                    <div class="rule-text">
+                                        <strong>You/We/They are + verb-ing</strong><br>
+                                        <em>The hamsters are running on wheels!</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Games Section -->
+            <section id="games" class="lesson-section">
+                <h2>🎮 Fun Games & Activities</h2>
+                <div class="games-grid">
+                    <!-- Animal Action Matcher -->
+                    <div class="game-card">
+                        <h3>🎯 Animal Action Matcher</h3>
+                        <div class="matching-game">
+                            <div class="animals-column">
+                                <div class="match-item animal" data-match="cat-playing">
+                                    <span class="animal-emoji">🐱</span>
+                                    <span class="action-word">playing</span>
+                                </div>
+                                <div class="match-item animal" data-match="dog-running">
+                                    <span class="animal-emoji">🐶</span>
+                                    <span class="action-word">running</span>
+                                </div>
+                                <div class="match-item animal" data-match="bird-flying">
+                                    <span class="animal-emoji">🐦</span>
+                                    <span class="action-word">flying</span>
+                                </div>
+                            </div>
+                            <div class="sentences-column">
+                                <div class="match-item sentence" data-match="cat-playing">
+                                    The cat <strong>is playing</strong> with yarn
+                                </div>
+                                <div class="match-item sentence" data-match="bird-flying">
+                                    The bird <strong>is flying</strong> in the sky
+                                </div>
+                                <div class="match-item sentence" data-match="dog-running">
+                                    The dog <strong>is running</strong> in the park
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-score">Score: <span id="matchingScore">0</span>/3</div>
+                    </div>
+
+                    <!-- Verb-ing Builder -->
+                    <div class="game-card">
+                        <h3>🔧 Verb-ing Builder</h3>
+                        <div class="verb-building-game">
+                            <div class="current-word" id="currentWord">play</div>
+                            <div class="ing-suffix">+ ing = </div>
+                            <input type="text" id="verbAnswer" placeholder="Type the -ing form">
+                            <button onclick="checkVerbAnswer()">Check! 🎯</button>
+                            <div class="verb-feedback" id="verbFeedback"></div>
+                            <div class="next-word-btn">
+                                <button onclick="nextVerb()">Next Word 🔄</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drag & Drop Sentence Builder -->
+                    <div class="game-card">
+                        <h3>🧩 Sentence Puzzle</h3>
+                        <div class="drag-drop-game">
+                            <div class="sentence-template">
+                                <div class="drop-zone" data-type="subject">Subject</div>
+                                <div class="drop-zone" data-type="auxiliary">is/are</div>
+                                <div class="drop-zone" data-type="verb">verb-ing</div>
+                            </div>
+                            <div class="word-bank">
+                                <div class="draggable" data-type="subject">🐰 The rabbit</div>
+                                <div class="draggable" data-type="auxiliary">is</div>
+                                <div class="draggable" data-type="verb">hopping</div>
+                                <div class="draggable" data-type="subject">🦋 The butterflies</div>
+                                <div class="draggable" data-type="auxiliary">are</div>
+                                <div class="draggable" data-type="verb">dancing</div>
+                            </div>
+                            <button onclick="checkSentence()">Check Sentence! ✅</button>
+                            <div class="sentence-feedback" id="sentenceFeedback"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Videos Section -->
+            <section id="videos" class="lesson-section">
+                <h2>🎬 Animated Learning Videos</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="animated-scene">
+                                <div class="scene-background">🌳🌸🌳</div>
+                                <div class="moving-character">🐿️</div>
+                                <div class="action-indicator">climbing ⬆️</div>
+                            </div>
+                            <div class="play-overlay" onclick="playVideo('squirrel')">
+                                ▶️ <span>The Squirrel is Climbing</span>
+                            </div>
+                        </div>
+                        <h4>Forest Adventures</h4>
+                        <p>Watch cute forest animals in action!</p>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="animated-scene">
+                                <div class="scene-background">🌊🏖️🌊</div>
+                                <div class="moving-character">🐢</div>
+                                <div class="action-indicator">swimming 🏊</div>
+                            </div>
+                            <div class="play-overlay" onclick="playVideo('turtle')">
+                                ▶️ <span>The Turtle is Swimming</span>
+                            </div>
+                        </div>
+                        <h4>Ocean Fun</h4>
+                        <p>Explore sea creatures and their activities!</p>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="animated-scene">
+                                <div class="scene-background">☁️🌤️☁️</div>
+                                <div class="moving-character">🦅</div>
+                                <div class="action-indicator">soaring ✈️</div>
+                            </div>
+                            <div class="play-overlay" onclick="playVideo('eagle')">
+                                ▶️ <span>The Eagle is Soaring</span>
+                            </div>
+                        </div>
+                        <h4>Sky High</h4>
+                        <p>See birds flying through the clouds!</p>
+                    </div>
+                </div>
+
+                <!-- Video Modal -->
+                <div id="videoModal" class="video-modal">
+                    <div class="video-content">
+                        <span class="close-video" onclick="closeVideo()">&times;</span>
+                        <div id="videoPlayer" class="video-player">
+                            <!-- Animated content will be loaded here -->
+                        </div>
+                        <div class="video-subtitles" id="videoSubtitles"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quiz" class="lesson-section">
+                <h2>🏆 Final Challenge Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                        </div>
+                        <span class="quiz-progress-text">Question <span id="currentQuestion">1</span> of 5</span>
+                    </div>
+
+                    <div class="quiz-question active" id="question1">
+                        <div class="question-header">
+                            <span class="question-icon">🐨</span>
+                            <h3>Question 1</h3>
+                        </div>
+                        <div class="question-scene">
+                            <div class="animated-question">
+                                <span class="scene-animal">🐨</span>
+                                <span class="scene-action">🌿</span>
+                            </div>
+                        </div>
+                        <p class="question-text">What is the koala doing?</p>
+                        <div class="quiz-options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="a">
+                                <span class="option-text">The koala eat leaves</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="b">
+                                <span class="option-text">The koala is eating leaves</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="c">
+                                <span class="option-text">The koala was eating leaves</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question" id="question2">
+                        <div class="question-header">
+                            <span class="question-icon">🦘</span>
+                            <h3>Question 2</h3>
+                        </div>
+                        <p class="question-text">Complete: "The kangaroos _____ jumping in the field."</p>
+                        <div class="quiz-options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="a">
+                                <span class="option-text">is</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="b">
+                                <span class="option-text">are</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="c">
+                                <span class="option-text">am</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question" id="question3">
+                        <div class="question-header">
+                            <span class="question-icon">🦆</span>
+                            <h3>Question 3</h3>
+                        </div>
+                        <p class="question-text">Which sentence is correct?</p>
+                        <div class="quiz-options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="a">
+                                <span class="option-text">The ducks is swimming</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="b">
+                                <span class="option-text">The ducks are swimming</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="c">
+                                <span class="option-text">The ducks swim</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question" id="question4">
+                        <div class="question-header">
+                            <span class="question-icon">🐸</span>
+                            <h3>Question 4</h3>
+                        </div>
+                        <p class="question-text">What is the -ing form of "hop"?</p>
+                        <div class="quiz-options">
+                            <label class="option">
+                                <input type="radio" name="q4" value="a">
+                                <span class="option-text">hoping</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="b">
+                                <span class="option-text">hopping</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q4" value="c">
+                                <span class="option-text">hoppingg</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question" id="question5">
+                        <div class="question-header">
+                            <span class="question-icon">🐼</span>
+                            <h3>Question 5</h3>
+                        </div>
+                        <div class="question-scene">
+                            <div class="animated-question">
+                                <span class="scene-animal">🐼</span>
+                                <span class="scene-action">😴</span>
+                            </div>
+                        </div>
+                        <p class="question-text">Create a sentence about what the panda is doing:</p>
+                        <div class="quiz-options">
+                            <label class="option">
+                                <input type="radio" name="q5" value="a">
+                                <span class="option-text">The panda is sleeping</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="b">
+                                <span class="option-text">The panda sleeps</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q5" value="c">
+                                <span class="option-text">The panda slept</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-navigation">
+                        <button id="prevBtn" onclick="previousQuestion()" disabled>← Previous</button>
+                        <button id="nextBtn" onclick="nextQuestion()">Next →</button>
+                        <button id="submitBtn" onclick="submitQuiz()" style="display: none;">Submit Quiz 🎉</button>
+                    </div>
+
+                    <div id="quizResults" class="quiz-results" style="display: none;">
+                        <div class="results-header">
+                            <span class="trophy">🏆</span>
+                            <h3>Quiz Complete!</h3>
+                        </div>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span class="score-number" id="finalScore">0</span>
+                                <span class="score-total">/5</span>
+                            </div>
+                        </div>
+                        <div class="score-message" id="scoreMessage"></div>
+                        <div class="celebration-animals" id="celebrationAnimals"></div>
+                        <button onclick="restartQuiz()" class="restart-btn">Try Again 🔄</button>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+            <!-- Present Simple Content -->
+            <div class="tense-content" id="present-simple-content">
+                <section id="introduction" class="lesson-section active">
+                    <div class="intro-card">
+                        <h2>⭐ Welcome to Present Simple Land! ⭐</h2>
+                        <div class="animal-intro">
+                            <div class="animal-character">
+                                <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=120&h=120&fit=crop&crop=face" alt="Happy Panda" class="character-img">
+                                <div class="speech-bubble">
+                                    <p>Hi! I'm Bamboo! I <span class="highlight">eat</span> bamboo every day!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formula-box">
+                            <h4>📝 Formula</h4>
+                            <div class="formula">
+                                <span class="subject">Subject</span> + 
+                                <span class="verb">Verb (base form/s/es)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Add more sections for Present Simple -->
+            </div>
+
+            <!-- Past Simple Content -->
+            <div class="tense-content" id="past-simple-content">
+                <section id="introduction" class="lesson-section active">
+                    <div class="intro-card">
+                        <h2>📅 Welcome to Past Simple Land! 📅</h2>
+                        <div class="animal-intro">
+                            <div class="animal-character">
+                                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=120&h=120&fit=crop&crop=face" alt="Happy Dog" class="character-img">
+                                <div class="speech-bubble">
+                                    <p>Hi! I'm Buddy! Yesterday I <span class="highlight">played</span> in the park!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formula-box">
+                            <h4>📝 Formula</h4>
+                            <div class="formula">
+                                <span class="subject">Subject</span> + 
+                                <span class="verb">Verb + ed / irregular form</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Add more sections for Past Simple -->
+            </div>
+
+            <!-- Future Simple Content -->
+            <div class="tense-content" id="future-simple-content">
+                <section id="introduction" class="lesson-section active">
+                    <div class="intro-card">
+                        <h2>🚀 Welcome to Future Simple Land! 🚀</h2>
+                        <div class="animal-intro">
+                            <div class="animal-character">
+                                <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=120&h=120&fit=crop&crop=face" alt="Happy Rabbit" class="character-img">
+                                <div class="speech-bubble">
+                                    <p>Hi! I'm Hoppy! Tomorrow I <span class="highlight">will jump</span> very high!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formula-box">
+                            <h4>📝 Formula</h4>
+                            <div class="formula">
+                                <span class="subject">Subject</span> + 
+                                <span class="auxiliary">will</span> + 
+                                <span class="verb">Verb (base form)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Add more sections for Future Simple -->
+            </div>
+
+            <!-- Present Perfect Content -->
+            <div class="tense-content" id="present-perfect-content">
+                <section id="introduction" class="lesson-section active">
+                    <div class="intro-card">
+                        <h2>💎 Welcome to Present Perfect Land! 💎</h2>
+                        <div class="animal-intro">
+                            <div class="animal-character">
+                                <img src="https://images.unsplash.com/photo-1551986782-d0169b3f8fa7?w=120&h=120&fit=crop&crop=face" alt="Happy Penguin" class="character-img">
+                                <div class="speech-bubble">
+                                    <p>Hi! I'm Penny! I <span class="highlight">have swum</span> in many oceans!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formula-box">
+                            <h4>📝 Formula</h4>
+                            <div class="formula">
+                                <span class="subject">Subject</span> + 
+                                <span class="auxiliary">have/has</span> + 
+                                <span class="verb">Past Participle</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Add more sections for Present Perfect -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-animals">
+                <span>🐾</span>
+                <span>🐾</span>
+                <span>🐾</span>
+            </div>
+            <p>&copy; 2024 Present Continuous Adventure - Learning with Animal Friends!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
